@@ -32,7 +32,7 @@ const categories = [
   {
     name: "Watches",
     count: "2 Items",
-    image: "/bestwatches.jpg",
+    image: "/watches.jpeg",
   },
   {
     name: "Tablets",
