@@ -49,7 +49,7 @@ export const products: Product[] = [
     original_price: 299,
     discount: "-17%",
     category: "Accessories",
-    image: "/Sony WH-1000XM5 Headphones.webp",
+    image: "/Sony WH-1000XM5 Headphones.png",
     rating: 5,
     reviews: 412,
     description: "Active Noise Cancellation, Transparency mode, and Adaptive Audio automatically adjust noise control settings to provide the best listening experience.",
