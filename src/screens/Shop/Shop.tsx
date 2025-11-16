@@ -80,6 +80,11 @@ export const Shop = (): JSX.Element => {
   const productsPerPage = 9;
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
+  useEffect(() => {
+    const urlSearchQuery = searchParams.get("search") || "";
+    setSearchQuery(urlSearchQuery);
+  }, [searchParams]);
+
   const handleWishlistToggle = (e: React.MouseEvent, product: Product) => {
     e.preventDefault();
     e.stopPropagation();
