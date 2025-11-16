@@ -106,7 +106,7 @@ export const About = (): JSX.Element => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/about.jpeg"
               alt="Modern technology workspace with laptop and devices"
               className="w-full h-auto rounded-lg object-cover"
             />
