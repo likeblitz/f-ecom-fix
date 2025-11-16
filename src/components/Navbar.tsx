@@ -24,7 +24,6 @@ export const Navbar = (): JSX.Element => {
   const totalItems = getTotalItems();
   const wishlistTotal = getWishlistTotal();
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const [showSearchModal, setShowSearchModal] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -33,7 +32,7 @@ export const Navbar = (): JSX.Element => {
     if (searchInput.trim()) {
       navigate(`/shop?search=${encodeURIComponent(searchInput)}`);
       setSearchInput("");
-      setShowSearchModal(false);
+      setShowMobileMenu(false);
     }
   };
 
@@ -69,36 +68,6 @@ export const Navbar = (): JSX.Element => {
           </nav>
 
           <div className="flex items-center gap-1 md:gap-2">
-            <div className="relative">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10"
-                onClick={() => setShowSearchModal(!showSearchModal)}
-              >
-                <SearchIcon className="h-5 w-5 text-gray-700" />
-              </Button>
-              {showSearchModal && (
-                <div className="absolute right-0 mt-2 w-80 bg-white border rounded-lg shadow-lg p-4 z-50">
-                  <form onSubmit={handleSearch} className="flex items-center gap-2">
-                    <Input
-                      type="text"
-                      placeholder="Search products..."
-                      value={searchInput}
-                      onChange={(e) => setSearchInput(e.target.value)}
-                      autoFocus
-                      className="flex-1"
-                    />
-                    <Button
-                      type="submit"
-                      className="bg-orange-500 hover:bg-orange-600 text-white px-4"
-                    >
-                      Search
-                    </Button>
-                  </form>
-                </div>
-              )}
-            </div>
             <Link to="/wishlist">
               <Button
                 variant="ghost"
